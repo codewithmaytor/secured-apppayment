@@ -7,17 +7,20 @@ Working academic prototype for the project by Mark Mutai. All funds, contacts, s
 Requires a modern browser and Node.js with ES modules. There are no npm dependencies.
 
 ```bash
-npm run build
 npm start
 ```
+
+This builds the latest source and starts the local website. No installation of npm packages is needed. For the lecturer presentation, start with [PRESENTATION_GUIDE.md](PRESENTATION_GUIDE.md) and open the named `.code-workspace` file one directory above this folder in VS Code. The `.vscode` folder includes build/test tasks and an F5 launch configuration.
 
 Open http://127.0.0.1:4173 and choose **Open demo workspace**. Keep the terminal open while using the local version. `dist/` is the standalone static build. Serve it over HTTP or HTTPS; do not open the HTML directly as a file.
 
 ```bash
-node scripts/test-model.mjs
+npm test
 ```
 
-Tests write `../evidence/model-test-results.json` when run in the full project workspace. In an extracted prototype-only archive, create an `evidence` directory beside the prototype directory first, or run the included full package.
+Tests create `test-results/model-test-results.json` within this project folder.
+
+To edit the interface, run `npm run dev`, save changes in `src`, and refresh the browser. To produce a standalone build without starting the server, use `npm run build`.
 
 ## Demonstration
 

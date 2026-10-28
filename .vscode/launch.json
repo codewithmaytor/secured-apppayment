@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Present Secured App Payment",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/serve.mjs",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build website",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "serverReadyAction": {
+        "pattern": "Local: (http://127\\.0\\.0\\.1:[0-9]+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
+    }
+  ]
+}

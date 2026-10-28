@@ -3,9 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "description": "Secured App Payment academic prototype and local presentation workspace",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "node scripts/build.mjs",
-    "dev": "node scripts/serve.mjs",
-    "start": "node scripts/serve.mjs"
+    "dev": "node scripts/serve.mjs --dev",
+    "prestart": "npm run build",
+    "start": "node scripts/serve.mjs",
+    "test": "node scripts/test-model.mjs"
   }
 }
